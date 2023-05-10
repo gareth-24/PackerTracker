@@ -74,5 +74,10 @@ namespace PackerTracker.Models
     {
       return _instances[searchId-1];
     }    
+
+    public void MarkItemAsPacked()
+    {
+      this.PackedStatus = true;
+    }
   }
 }

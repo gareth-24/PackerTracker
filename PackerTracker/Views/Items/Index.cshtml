@@ -17,7 +17,7 @@
       <p>There are no items in the list.</p>
     }
     <ul>
-      <p>Packed Items</p>
+      <p>Packed Items:</p>
       @foreach (Item item in Model)
       {
         if (item.PackedStatus == true)
@@ -27,7 +27,7 @@
       }
     </ul>
     <ul>
-      <p>Not Yet Packed Items</p>
+      <p>Not Yet Packed Items:</p>
       @foreach (Item item in Model)
       {
         if (item.PackedStatus == false)

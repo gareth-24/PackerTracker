@@ -28,14 +28,14 @@
       }
       @if (Model.PackedStatus == false)
       {
-        <li>This item is not yet packed</li>
+        <li>This item is not yet packed</li><br>
       }
-
       <li>Price: $@Model.Cost</li>
       <li>Weight: @Model.Weight lbs</li>                  
-    </ul>
+    </ul><br>
 
-    <a href='/items/new'>Add another item</a>
+    @* <a href='/items/@Model.Id/edit'>Edit item</a><br> *@
+    <a href='/items/new'>Add another item</a><br>
     <a href='/items'>View all items</a>
   </body>
 </html>

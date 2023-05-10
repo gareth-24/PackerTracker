@@ -36,7 +36,14 @@ namespace PackerTracker.Controllers
     {
       Item foundItem = Item.Find(id);
       return View(foundItem);
-    }       
+    }
+    // [HttpGet("/edit")]
+    // public ActionResult Edit(int id)
+    // {
+    //   Item editItem = Item.Find(id);
+    //   editItem.MarkItemAsPacked();
+    //   return View (editItem);
+    // }
   }
 
 }
