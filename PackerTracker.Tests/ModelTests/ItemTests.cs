@@ -11,7 +11,7 @@ namespace PackerTracker.Tests
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
-      Item newItem = new Item("testitem");
+      Item newItem = new Item("testitem", true);
       Assert.AreEqual(typeof(Item), newItem.GetType());
     }
 
@@ -21,10 +21,37 @@ namespace PackerTracker.Tests
       //Arrange
       string itemName = "Backpack";
       //Act
-      Item newItem = new Item(itemName);
+      Item newItem = new Item(itemName, true);
       string result = newItem.ItemName;
       //Assert
       Assert.AreEqual(itemName, result);
+    }
+
+    [TestMethod]
+    public void GetPackedStatus_ReturnsPackedStatus_Bool()
+    {
+      //Arrange
+      string itemName = "Backpack";
+      bool packedStatus = true;
+      //Act
+      Item newItem = new Item(itemName, packedStatus);
+      bool result = newItem.PackedStatus;
+      //Assert
+      Assert.AreEqual(result, packedStatus);
+    }
+
+    [TestMethod]
+    public void SetPackedStatus_SetsPackedStatus_Bool()
+    {
+      //Arrange
+      bool packedStatus = true;
+      Item newItem = new Item("backpack", packedStatus);
+      //Act
+      bool updatedStatus = false;
+      newItem.PackedStatus = updatedStatus;
+      bool result = newItem.PackedStatus;
+      //Assert
+      Assert.AreEqual(updatedStatus, result);
     }
   }
 }
